@@ -3,7 +3,7 @@
 image: docker:latest
 
 variables:
-  VERSION: "9.2.0"
+  VERSION: "9.2.1"
 
 services:
   - docker:dind
