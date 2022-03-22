@@ -18,7 +18,22 @@ ENV GRAPHDB_HOME=${GRAPHDB_PARENT_DIR}/home
 ENV GRAPHDB_INSTALL_DIR=${GRAPHDB_PARENT_DIR}/dist
 
 RUN apt-get update && \
+    apt-get upgrade -y && \
     apt-get install -y unzip curl
+
+RUN echo 'openssl_conf = default_conf\n' | cat - /etc/ssl/openssl.cnf > /openssl.cnf
+RUN echo '[ default_conf ]' >> /openssl.cnf
+RUN echo '' >> ./openssl.cnf
+RUN echo 'ssl_conf = ssl_sect' >> /openssl.cnf
+RUN echo '' >> /openssl.cnf
+RUN echo '[ssl_sect]' >> /openssl.cnf
+RUN echo '' >> /openssl.cnf
+RUN echo 'system_default = system_default_sect' >> /openssl.cnf
+RUN echo '' >> /openssl.cnf
+RUN echo '[system_default_sect]' >> /openssl.cnf
+RUN echo 'MinProtocol = TLSv1.2' >> /openssl.cnf
+RUN echo 'CipherString = DEFAULT:@SECLEVEL=1' >> /openssl.cnf
+RUN cp /openssl.cnf /etc/ssl/openssl.cnf
 
 # Copy the installation file recieved after registration
 #ADD graphdb-${edition}-${version}-dist.zip /tmp
