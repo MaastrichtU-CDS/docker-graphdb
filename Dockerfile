@@ -22,7 +22,7 @@ RUN apt-get update && \
 
 # Copy the installation file recieved after registration
 #ADD graphdb-${edition}-${version}-dist.zip /tmp
-RUN curl -L -o /tmp/graphdb-${edition}-${version}-dist.zip ${download_link}
+RUN curl -L -k -o /tmp/graphdb-${edition}-${version}-dist.zip ${download_link}
  
 RUN mkdir -p ${GRAPHDB_PARENT_DIR} && \
     cd ${GRAPHDB_PARENT_DIR} && \
