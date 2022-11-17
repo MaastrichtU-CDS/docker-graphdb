@@ -1,0 +1,21 @@
+name: RDF Triple Store
+
+on:
+  push:
+    branches: [ "master" ]
+
+env:
+  REGISTRY: ghcr.io
+
+jobs:
+  build-and-publish-latest: 
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master'
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build and publish graphdb
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        image-name: docker-graphdb
+        image-tag: latest
