@@ -15,6 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build and publish graphdb
+      uses: VaultVulp/gp-docker-action@1.0.1
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         image-name: docker-graphdb
