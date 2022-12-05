@@ -1,5 +1,6 @@
 #FROM openjdk:8-jdk
-FROM azul/zulu-openjdk
+#FROM azul/zulu-openjdk
+FROM adoptopenjdk/openjdk11
  
 LABEL maintainer "Johan van Soest <j.vansoest@maastrichtuniversity.nl>"
  
