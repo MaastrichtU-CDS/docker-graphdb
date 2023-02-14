@@ -5,8 +5,8 @@ FROM adoptopenjdk/openjdk11
 LABEL maintainer "Johan van Soest <j.vansoest@maastrichtuniversity.nl>"
  
 # Build time arguments
-ARG download_link=https://email.ontotext.com/events/public/v1/encoded/track/tc/GD+113/cGJhF04/VX50LC576hMFW3xsVTb1qvhM5W5q0Twr4GYTjmN3pwdFN3q3pBV1-WJV7CgWWsW2tZS9G4fbLkQW8Nb3lK47Wbk2F3HWYlD5rjmN7dzp3Mrcv7SW7rckbB1R4Q8jW6KXQKq1s4Yc1W70PDt65QfKhXW3fBC2J5sYXXqW2zy2ph7Fvh2QW7l76R-2BM_J4W43m8Lf3bJNHDW7RMLr13qvvvQW3-s2L87SLL7GW4FSbs87mp7-gW9cZcBL4QHXrDN4Rzv361-xJ6W140Lc51N01mpW2_nmCw8j-7Q5V-RMm17BFlS6W2wX2LD8xfWZwW6l2xJP8g4QVFW2LLYK66-kmYJVJLP-B2wRb9GVTkP634x8WcQW4fK0t46wvCYJW21YTtv5SHCBMW4ZngWy6wqDShW7sc4wv1m0QRSW9jD9gr6Jh548W8dqJCb8ycGwH3byL1?_ud=bd1197c8-fbd9-4479-8992-6ef6dcf48225
-ARG version=9.10.3
+ARG download_link=https://go.ontotext.com/cs/c/?cta_guid=3d3cab68-ee83-4dfc-a040-aa707e9a751a&signature=AAH58kET9etoR5C3sbavKQE8N2f_lpQ7fw&placement_guid=ed4ee978-afe2-438d-b2a5-139cf9c665bb&click=f2348df9-5064-44c0-b7cd-f516d365ccf0&hsutk=66064c7cb1c83bb879ea84b3e045d315&canon=https%3A%2F%2Fwww.ontotext.com%2Fthank-you-for-downloading-graphdb%2F%3FsubmissionGuid%3D9aef4612-99d5-4f6f-bb59-8a6dfaf6163b&utm_referrer=https%3A%2F%2Fwww.ontotext.com%2Fproducts%2Fgraphdb%2Fdownload%2F&portal_id=5619976&redirect_url=APefjpF3GTqW2qLJUXRBkBv6FdQiXkuGSIIk2ztRDQCyg-uA-vHlvEyv0WSEblY_adaLcp1qs0Mr6XRHj8SwAPB1ww2sGgswSzael41cSw_kX609s-E65iTSaBSHGMHFHA2aVsj7k1-ITdTBZnU4rkQ3xZSviJVz6Qp5k7oAcMj51YBP4iyeXox_wvxxpm2lsv2ydteLAMKAmLsqnUJ24wQM1iJDBxfBx5zlb7svwXIgJC4Cd9WAeVf9GEoa_Cl44EpOILhVggkjSuT6oSMgvg0QXYHvOBBeAWyDZX56UbMD7d-f1w5zjQfG4lhG7a8ancL8ZmYKPyF6Flg2LYNlejAT1eqiftAI_g&__hstc=95638467.66064c7cb1c83bb879ea84b3e045d315.1676365769953.1676365769953.1676365769953.1&__hssc=95638467.4.1676365769953&__hsfp=1689991152&contentType=standard-page
+ARG version=10.1.3
 ARG edition=free
  
 # Environment variables, to be used for the docker image
